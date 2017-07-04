@@ -30,6 +30,15 @@ class App extends Component {
           <area id="midstuen" alt="Midstuen" onTouchEnd={this.clickThis} onClick={this.clickThis} className="circle" shape="circle" coords="272.5,398.5,10" href=""/>
           <area id="skaadalen" alt="Skådalen" onTouchEnd={this.clickThis} onClick={this.clickThis} className="circle" shape="circle" coords="303.5,429.5,10" href=""/>
           <area id="vettakollen" alt="Vettakollen" onTouchEnd={this.clickThis} onClick={this.clickThis} className="circle" shape="circle" coords="335.5,461.5,10" href=""/>
+          <area id="gulleraasen" alt="Gulleråsen" onTouchEnd={this.clickThis} onClick={this.clickThis} className="circle" shape="circle" coords="364.5,490.5,10" href=""/>
+          <area id="graakammen" alt="Gråkammen" onTouchEnd={this.clickThis} onClick={this.clickThis} className="circle" shape="circle" coords="397.5,524.5,10" href=""/>
+          <area id="slemdal" alt="Slemdal" onTouchEnd={this.clickThis} onClick={this.clickThis} className="circle" shape="circle" coords="429.5,555.5,10" href=""/>
+          <area id="ris" alt="Ris" onTouchEnd={this.clickThis} onClick={this.clickThis} className="circle" shape="circle" coords="460.5,587.5,10" href=""/>
+          <area id="gaustad" alt="Gaustad" onTouchEnd={this.clickThis} onClick={this.clickThis} className="circle" shape="circle" coords="492.5,618.5,10" href=""/>
+          <area id="vinderen" alt="Vinderen" onTouchEnd={this.clickThis} onClick={this.clickThis} className="circle" shape="circle" coords="523.5,649.5,10" href=""/>
+          <area id="steinerud" alt="Steinerud" onTouchEnd={this.clickThis} onClick={this.clickThis} className="circle" shape="circle" coords="554.5,681.5,10" href=""/>
+          <area id="froeen" alt="Frøen" onTouchEnd={this.clickThis} onClick={this.clickThis} className="circle" shape="circle" coords="586.5,712.5,10" href=""/>
+
 
         </map>
 
