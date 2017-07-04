@@ -7,29 +7,30 @@ class App extends Component {
 
   clickThis(e) {
 
-    e.preventDefault()
-    alert("stuff happened")
-    
+    //e.preventDefault()
+    console.log(e.target.id)
+    e.target.style.fill="red"
 
   }
 
   render() {
     return (
       <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo"/>
-          <h2>Welcome to T-PAIN</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit
-          <code>src/App.js</code>
-          and save to reload.
-        </p>
 
         <img src={map} useMap="#tmap" alt="Oslo T-Bane Linjekart"/>
 
         <map name="tmap">
-          <area id="1" alt="station name goes here" onTouchEnd={this.clickThis} onClick={this.clickThis} className="yellow" shape="circle" coords="500,500,500" href=""/>
+          <area id="frognerseteren" alt="Frognerseteren" onTouchEnd={this.clickThis} onClick={this.clickThis} className="circle" shape="circle" coords="272.5,104.5,10" href=""/>
+          <area id="voksenkollen" alt="Voksenkollen" onTouchEnd={this.clickThis} onClick={this.clickThis} className="circle" shape="circle" coords="272.5,146.5,10" href=""/>
+          <area id="lillevann" alt="Lillevann" onTouchEnd={this.clickThis} onClick={this.clickThis} className="circle" shape="circle" coords="272.5,188.5,10" href=""/>
+          <area id="skogen" alt="Skogen" onTouchEnd={this.clickThis} onClick={this.clickThis} className="circle" shape="circle" coords="272.5,230.5,10" href=""/>
+          <area id="voksenlia" alt="Voksenlia" onTouchEnd={this.clickThis} onClick={this.clickThis} className="circle" shape="circle" coords="272.5,272.5,10" href=""/>
+          <area id="holmekollen" alt="Holmekollen" onTouchEnd={this.clickThis} onClick={this.clickThis} className="circle" shape="circle" coords="272.5,314.5,10" href=""/>
+          <area id="besserud" alt="besserud" onTouchEnd={this.clickThis} onClick={this.clickThis} className="circle" shape="circle" coords="272.5,356.5,10" href=""/>
+          <area id="midstuen" alt="Midstuen" onTouchEnd={this.clickThis} onClick={this.clickThis} className="circle" shape="circle" coords="272.5,398.5,10" href=""/>
+          <area id="skaadalen" alt="Skådalen" onTouchEnd={this.clickThis} onClick={this.clickThis} className="circle" shape="circle" coords="303.5,429.5,10" href=""/>
+          <area id="vettakollen" alt="Vettakollen" onTouchEnd={this.clickThis} onClick={this.clickThis} className="circle" shape="circle" coords="335.5,461.5,10" href=""/>
+
         </map>
 
       </div>
