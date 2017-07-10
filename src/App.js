@@ -3,51 +3,40 @@ import './App.css'
 
 class App extends Component {
 
-  clickThis(e) {
+  contructor(props) {
 
-    //TODO=" retain scroll position on reload"
-    //e.preventDefault()
-    console.log(e.target.id)
-    e.target.style.fill = "red"
-    document.e.target.id.focus()
-
+    this.state = {
+      stateStops: []
+    }
   }
 
-  loadData(url) {
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function(response, e) {
+  componentDidMount() {
+    var self = this
+    var stops = this.getInfo('http://reisapi.ruter.no/Line/GetLinesRuterExtended?ruterOperatedOnly=true')
 
-      console.log(response)
+    self.setState({stateStops: stops})
 
-      if (xhttp.readyState === 4 && xhttp.status === 200) {
-        console.log(xhttp.responseText);
-      }
-    };
-    xhttp.open("GET", url, true);
-    xhttp.send();
+
   }
 
   getInfo(url) {
-    console.log('wat')
+
     return fetch(url).then((response) => response.json()).then((responseJson) => {
-
-console.log(url)
-console.log(responseJson)
-
-
-
-      return responseJson.movies;
-    }).catch((error) => {
-      console.error(error);
-    });
+      return responseJson.filter(function(line) {
+        return line.Transportation === 8
+      }).map((tbahnLine) => {
+        return tbahnLine.Stops;
+      })
+    })
   }
 
   render() {
 
-    this.getInfo('http://reisapi.ruter.no/Line/GetLinesRuterExtended?ruterOperatedOnly=true')
+    var stops = this.getInfo('http://reisapi.ruter.no/Line/GetLinesRuterExtended?ruterOperatedOnly=true')
 
     return (
-      <div onClick={this.test} className="App"></div>
+
+      <div></div>
     )
   }
 }
